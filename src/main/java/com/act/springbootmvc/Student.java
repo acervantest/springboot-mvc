@@ -12,12 +12,14 @@ public class Student {
     private String lastName;
     private String country;
     private String favoriteLanguage;
+    private String[] operatingSystems;
 
     private LinkedHashMap<String, String> countryOptions;
 
     public Student(){
         countryOptions = new LinkedHashMap<>();
         countryOptions.put("MX","Mexico");
+        countryOptions.put("CAN","Canada");
         countryOptions.put("BRA","Brazil");
         countryOptions.put("FRA","France");
         countryOptions.put("DEU","Germany");
