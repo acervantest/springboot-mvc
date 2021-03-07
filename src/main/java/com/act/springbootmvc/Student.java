@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 @Setter
 public class Student {
     private String firstName;
-    @NotNull(message = "is required")
+    @NotNull(message = "can not be empty")
     @Size(min = 1, message = "is required")
     private String lastName;
     private String country;

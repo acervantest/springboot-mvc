@@ -1,8 +1,11 @@
 package com.act.springbootmvc;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -37,5 +40,10 @@ public class FormController {
         }
     }
 
+    @InitBinder //pre-process all web requests coming into our controller
+    public void initBinder(WebDataBinder dataBinder){
+        StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);//defined in Spring API
+        dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);//pre-process every string form data, if it only has white space trim it to null
+    }
 
 }
