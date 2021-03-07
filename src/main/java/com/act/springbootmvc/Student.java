@@ -1,7 +1,6 @@
 package com.act.springbootmvc;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.LinkedHashMap;
@@ -12,6 +11,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String country;
+    private String favoriteLanguage;
 
     private LinkedHashMap<String, String> countryOptions;
 
