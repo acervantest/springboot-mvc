@@ -27,9 +27,13 @@
 
      Free Passes: ${student.freePasses}
 
-     <br><br>
+    <br><br>
 
     Postal Code: ${student.postalCode}
+
+    <br><br>
+
+    Postal Code: ${student.courseCode}
 
 </body>
 </html>

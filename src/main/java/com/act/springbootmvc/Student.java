@@ -26,6 +26,9 @@ public class Student {
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
     private String postalCode;
 
+    @CourseCode(value = "FUN", message = "must start with FUN")
+    private String courseCode;
+
     private LinkedHashMap<String, String> countryOptions;
 
     public Student(){
