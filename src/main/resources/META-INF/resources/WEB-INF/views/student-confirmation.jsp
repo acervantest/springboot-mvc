@@ -24,7 +24,12 @@
     </ul>
 
     <br><br>
+
      Free Passes: ${student.freePasses}
+
+     <br><br>
+
+    Postal Code: ${student.postalCode}
 
 </body>
 </html>

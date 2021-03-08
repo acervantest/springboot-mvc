@@ -33,6 +33,11 @@
 
         <br><br>
 
+        Postal Code: <form:input path="postalCode" />
+                <form:errors path="postalCode" cssClass="error" />
+
+                <br><br>
+
         Country:
             <form:select path="country">
                 <form:options items="${student.countryOptions}"/>
