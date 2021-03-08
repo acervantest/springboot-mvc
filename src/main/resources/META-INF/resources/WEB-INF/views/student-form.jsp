@@ -17,13 +17,21 @@
 
     <form:form action="processForm" modelAttribute="student">
         <br>
+
         First name: <form:input path="firstName" />
+
         <br>
         <br>
+
         Last name (*): <form:input path="lastName" />
         <form:errors path="lastName" cssClass="error" />
-        <br>
-        <br>
+
+        <br><br>
+
+        Free Pases: <form:input path="freePasses" />
+        <form:errors path="freePasses" cssClass="error" />
+
+        <br><br>
 
         Country:
             <form:select path="country">

@@ -3,6 +3,8 @@ package com.act.springbootmvc;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
@@ -17,6 +19,10 @@ public class Student {
     private String country;
     private String favoriteLanguage;
     private String[] operatingSystems;
+
+    @Min(value = 1, message = "must be greater than or equal to one")
+    @Max(value = 10, message = "must be less than or equal to ten")
+    private int freePasses;
 
     private LinkedHashMap<String, String> countryOptions;
 

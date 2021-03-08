@@ -23,5 +23,8 @@
         </c:forEach>
     </ul>
 
+    <br><br>
+     Free Passes: ${student.freePasses}
+
 </body>
 </html>
