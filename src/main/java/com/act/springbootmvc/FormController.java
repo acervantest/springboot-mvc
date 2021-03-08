@@ -31,7 +31,8 @@ public class FormController {
     public String processForm(
             @Valid @ModelAttribute("student") Student student,
             BindingResult bindingResult){ //the errors or bindingResult params have to follow the model object
-        if(bindingResult.hasErrors()){
+        System.out.println(bindingResult);
+        if (bindingResult.hasErrors()){
             return "student-form";
         } else {
             System.out.println("the student: " + student.getFirstName()
